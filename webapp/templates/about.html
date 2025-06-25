@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}About - Food Image Classifier{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="about-section">
+        <h1>🧠 About This Project</h1>
+        
+        <div class="about-card">
+            <h2>🍽️ What is this?</h2>
+            <p>
+                This is a fun, beginner-friendly <strong>Convolutional Neural Network (CNN)</strong> 
+                that can recognize 4 types of food from images: Pizza 🍕, Pasta 🍝, Salad 🥗, and Donuts 🍩!
+            </p>
+        </div>
+        
+        <div class="about-card">
+            <h2>🔧 Tech Stack</h2>
+            <ul>
+                <li><strong>Machine Learning:</strong> TensorFlow 2.x (Keras), NumPy</li>
+                <li><strong>Image Processing:</strong> PIL, OpenCV</li>
+                <li><strong>Web Interface:</strong> Flask, HTML, CSS, JavaScript</li>
+                <li><strong>Visualization:</strong> Matplotlib</li>
+            </ul>
+        </div>
+        
+        <div class="about-card">
+            <h2>🎯 Features</h2>
+            <ul>
+                <li>🧠 Custom CNN architecture with 3 convolutional layers</li>
+                <li>📊 Confidence meter with fun messages</li>
+                <li>👨‍🍳 Random chef tips for each food type</li>
+                <li>🔗 Recipe links for cooking inspiration</li>
+                <li>👃 Easter egg "smell detector" (coming soon!)</li>
+                <li>📱 Clean, responsive web interface</li>
+            </ul>
+        </div>
+        
+        <div class="about-card">
+            <h2>🚀 How it Works</h2>
+            <ol>
+                <li><strong>Data Preprocessing:</strong> Images are resized to 128x128 pixels and normalized</li>
+                <li><strong>CNN Architecture:</strong> 3 conv layers + pooling + batch normalization + dropout</li>
+                <li><strong>Training:</strong> Model learns from sample food images with data augmentation</li>
+                <li><strong>Prediction:</strong> New images are classified with confidence scores</li>
+            </ol>
+        </div>
+        
+        <div class="about-card">
+            <h2>📈 Model Performance</h2>
+            <p>
+                The model uses early stopping and learning rate reduction to achieve optimal performance.
+                Training typically reaches 80-90% accuracy on validation data with the sample dataset.
+            </p>
+        </div>
+        
+        <div class="about-card">
+            <h2>🎓 Perfect for</h2>
+            <ul>
+                <li>Machine Learning portfolio projects</li>
+                <li>Learning CNN fundamentals</li>
+                <li>Understanding image classification</li>
+                <li>Demonstrating full-stack ML applications</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

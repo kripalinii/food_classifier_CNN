@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="hero-section">
+        <h1>🍕 AI Food Detective 🍝</h1>
+        <p>Upload a food image and let our CNN guess what delicious dish you've got!</p>
+        <div class="food-emojis">
+            <span>🍕</span>
+            <span>🍝</span>
+            <span>🥗</span>
+            <span>🍩</span>
+        </div>
+    </div>
+    
+    <div class="upload-section">
+        <div class="upload-box" id="uploadBox">
+            <div class="upload-content">
+                <div class="upload-icon">📸</div>
+                <h3>Drop your food photo here</h3>
+                <p>or click to browse</p>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                    Choose Image
+                </button>
+            </div>
+        </div>
+        
+        <div class="preview-section" id="previewSection" style="display: none;">
+            <img id="previewImage" alt="Preview">
+            <button class="predict-btn" id="predictBtn">🔍 Analyze Food</button>
+        </div>
+    </div>
+    
+    <div class="loading-section" id="loadingSection" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>🧠 AI is thinking... analyzing your delicious photo!</p>
+    </div>
+    
+    <div class="results-section" id="resultsSection" style="display: none;">
+        <div class="result-card">
+            <h2 id="resultTitle"></h2>
+            <div class="confidence-meter">
+                <div class="confidence-bar">
+                    <div class="confidence-fill" id="confidenceFill"></div>
+                </div>
+                <span id="confidenceText"></span>
+            </div>
+            <div class="chef-tip" id="chefTip"></div>
+            <div class="recipe-link" id="recipeLink"></div>
+            <div class="easter-egg" id="easterEgg">
+                <button onclick="showSmellMessage()">👃 Guess the Smell</button>
+                <p id="smellMessage" style="display: none;"></p>
+            </div>
+            <button class="try-again-btn" onclick="resetApp()">Try Another Image</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
